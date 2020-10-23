@@ -36,9 +36,14 @@
     max-width: 600px;
     height: 60px;
     list-style-type: none;
+}
+#meusLinks{
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+.btnMenu{
+    display: none;
 }
 /*fim topo*/
 /*Começo banner*/
@@ -218,7 +223,7 @@
 }
 /*fim rodape*/
 /*responsivel*/
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1199px){
     .topo nav{
     width: 80%;    
     }
@@ -262,5 +267,37 @@
     }
     .text-endereco img{
         position: unset;
+    }
+}@media screen and (max-width: 767px){
+
+    .btnMenu{
+        display: block;
+    }
+    .topo nav{
+        width: 100%;
+    }
+    .topo nav ul{
+        max-width: 100%;
+        width: 100%;
+        flex-direction: column;
+        height: 350px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #000000;   
+    }
+    #meusLinks{
+        display: none;
+    }
+    .banner_text h1{
+        font-size: 60px;
+    }
+}
+@media screen and (max-width: 575px){
+    .banner_text h1{
+        font-size: 50px;
+    }
+    .banner_text p{
+        font-size: 40px;
     }
 }

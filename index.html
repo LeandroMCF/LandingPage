@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <title>Landing Page - Curso de desenvolvimento de sistemas</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/8ea9353849.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!--inicio topo-->
     <header class="topo">
         <nav>
-            <ul>
+            <ul id="meusLinks">
                 <li><a href="index.html">Início</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="desafio.html">Desafio</a></li>
                 <li><a href="endereco.html">Endereço</a></li>
             </ul>
+            <a class="btnMenu" onclick="meuMenu()">
+                <i class="fas fa-bars"></i>
+            </a>
         </nav>
     </header>
     <!--fim topo-->
@@ -83,5 +87,15 @@
             <p>Copyright @ 2020 - Escola Senai de Informática</p>
         </div>
     </footer>
+    <script>
+        function meuMenu() {
+            var ulDoMenu = document.getElementById("meusLinks");
+            if (ulDoMenu.style.display === "flex") {
+                ulDoMenu.style.display = "none";
+            } else {
+                ulDoMenu.style.display = "flex";
+            }
+        }
+    </script>
 </body>
 </html>
